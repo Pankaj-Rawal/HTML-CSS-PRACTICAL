@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+.logo{
+    padding: 20px;
+    margin: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+.outer {  
+   width: 150px;  
+   height: 150px;  
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);  
+   border-radius: 35px;  
+   display: grid;  
+   place-items: center;  
+ }  
+ /* innerside in outer box */  
+ .inner {  
+   width: 120px;  
+   height: 120px;  
+   border: 10px solid #fff;  
+   border-radius: 32px;  
+   display: grid;  
+   place-items: center;  
+   position: relative;  
+ } 
+ /* center circle of logo */  
+ .inner::before {  
+   content: '';  
+   width: 45px;  
+   height: 45px;  
+   border: 10px solid #fff;  
+   border-radius: 50%;  
+   background: transparent;  
+   position: absolute;  
+ }  
+ /* top right circle of logo */  
+ .inner::after {  
+   content: '';  
+   width: 10px;  
+   height: 10px;  
+   border: 2px solid #fff;  
+   border-radius: 50%;  
+   background: #fff;  
+   position: absolute;  
+   top: 8px;  
+   right: 10px;  
+ } 
+/* Add padding to containers */
+.container {
+  padding: 30px;
+  margin: 30px;
+  background-color: white;
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #5c5959;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="logo">
+    <div class="outer">  
+        <div class="inner">  
+        </div>  
+    </div> 
+</div>
+<form action="/action_page.php">
+    <div class="container">
+                                           <h1>Instagram</h1>
+    <p> Create an Account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
